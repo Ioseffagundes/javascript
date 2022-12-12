@@ -1,37 +1,49 @@
-<!--
-    ## IMPORTANTE ##
-    Você tem todo o direito de usar esse material 
-    para seu próprio aprendizado. Professores também 
-    podem ter acesso a todo o conteúdo e usá-los com 
-    seus alunos. Porém todos os que usarem esse 
-    material - seja para qual for a finalidade - deverão 
-    manter a referência ao material original, disponível 
-    em https://github.com/gustavoguanabara/javascript. Este 
-    material não poderá ser utilizado em nenhuma hipótese 
-    para ser replicada - integral ou parcialmente - 
-    por autores/editoras/instituições para criar livros 
-    ou apostilas, com finalidades de obter ganho financeiro 
-    com ele.
--->
-
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação JS</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Script</title>
     <style>
-        body { font: 12pt Arial; }
-        button { font-size: 12pt; padding: 30px; }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: black;
+        position: relative;
+        height: 100vh;
+      }
+      h1 {
+        text-align: center;
+      }
+      main {
+      }
+      div {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background-color: orange;
+        border-radius: 8px;
+        padding: 50px;
+      }
+      div:hover {
+        background-color: orangered;
+        transition: ease 400ms'
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
-    <h1>Interagindo com um botão</h1>
-    <button onclick="clicou()">Clica em mim!</button>
+  </head>
+  <body>
+    <h1>First exercise in JavaScript</h1>
+    <main>
+      <div id="a" onclick="clicked()">1</div>
+    <main>
     <script>
-        function clicou() {
-            window.alert('Você clicou no botão!')
-        }
+      function clicked() {
+        var nome = window.prompt("What's your name?"); //pergunta o nome
+        window.alert("É um grande prazer em conhece-lo, " + nome + '!')
+      }
     </script>
-</body>
+  </body>
 </html>

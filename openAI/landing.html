@@ -89,8 +89,8 @@
       let i = 0;
       setInterval(() => {
         // Define a cor do botão como a próxima cor da lista
-        button.style.color = colors[i];
-
+        button.style.color = "white";
+        button.style.backgroundColor = colors[i];
         // Avança para a próxima cor da lista
         i = (i + 1) % colors.length;
       }, 1000);

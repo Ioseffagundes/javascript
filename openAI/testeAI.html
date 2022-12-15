@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Síntese de Fala</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #eaeaea;
+      }
+      input {
+        font-size: 1.5em;
+        padding: 0.5em;
+        width: 500px;
+        text-align: center;
+      }
+      button {
+        font-size: 1.5em;
+        padding: 0.5em;
+        margin-top: 1em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <h1>Síntese de Fala</h1>
+    <p>Digite o texto que deseja ouvir abaixo:</p>
+    <input type="text" id="textInput" />
+    <button onclick="synthesize()">Sintetizar Voz</button>
+    <script>
+      // Função para sintetizar a voz a partir do texto digitado
+      function synthesize() {
+        // Obtém o texto digitado pelo usuário
+        const text = document.getElementById("textInput").value;
+        console.log("Texto digitado:", text);
+
+        // Cria um objeto de síntese de fala com as configurações desejadas
+        const synth = window.speechSynthesis;
+
+        // Cria um objeto de voz com as configurações desejadas
+        const voice = new SpeechSynthesisVoice("pt-BR");
+
+        // Cria um objeto de fala com o texto e as configurações de voz
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.voice = voice;
+
+        // Inicia a reprodução da voz sintetizada
+        synth.speak(utterance);
+      }
+    </script>
+  </body>
+</html>

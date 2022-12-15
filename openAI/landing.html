@@ -19,6 +19,17 @@
         margin-right: auto;
         padding: 1em;
       }
+      button {
+        background-color: #333;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+        cursor: pointer;
+      }
+
       img.photo {
         max-width: 300px;
         border-radius: 50%;
@@ -54,7 +65,10 @@
       src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
       alt="Foto de um cachorro"
     />
-    <p>Baixe o aplicativo agora:</p>
+    <p>
+      Baixe o aplicativo agora: <br />
+      <button id="myButton" class="primary">Baixe o aplicativo</button>
+    </p>
     <a href="#">
       <img
         src="https://betha.store/assets/images/disponivel-playstore.png"
@@ -64,5 +78,22 @@
     <footer>
       <p>Mais informações: <a href="#">contato@adoteumcachorro.com</a></p>
     </footer>
+    <script>
+      // Obtém o botão pelo seu ID
+      const button = document.getElementById("myButton");
+
+      // Define uma lista de cores para o botão
+      const colors = ["red", "green", "blue"];
+
+      // Inicia o loop para mudar a cor do botão
+      let i = 0;
+      setInterval(() => {
+        // Define a cor do botão como a próxima cor da lista
+        button.style.color = colors[i];
+
+        // Avança para a próxima cor da lista
+        i = (i + 1) % colors.length;
+      }, 1000);
+    </script>
   </body>
 </html>
